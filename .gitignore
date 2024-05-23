@@ -1,0 +1,10 @@
+# Anything secret, anything generated, anything not code
+
+.DS_Store
+.env
+*.csv
+*.parquet
+data/
+.__pycache__
+.terraform
+.venv
