@@ -1,2 +1,6 @@
-# c11-dan-example-repo
-Meaningful description
+# Repository steps
+
+- Make it
+- With a README
+- No `.gitignore` (do that later)
+- Add branch protection rules for `main`
