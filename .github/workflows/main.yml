@@ -12,12 +12,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout the code"
-        run: echo "Getting the code!"
+        uses: actions/checkout@v4
       - name: "Install Python"
-        run: echo "Getting Python!"
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
       - name: "Install all libraries"
-        run: echo "Installing!"
+        run: |
+          pip3 install -r requirements.txt
+          echo "Done installing all libraries!"
       - name: "Run Pytest"
-        run: echo "Testing!"
+        run: pytest
       - name: "Run PyLint"
-        run: echo "Linting!"
+        run: pylint *.py
