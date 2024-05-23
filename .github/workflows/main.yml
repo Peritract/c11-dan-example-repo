@@ -1,0 +1,23 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  quality_control:
+    name: "Quality Control"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout the code"
+        run: echo "Getting the code!"
+      - name: "Install Python"
+        run: echo "Getting Python!"
+      - name: "Install all libraries"
+        run: echo "Installing!"
+      - name: "Run Pytest"
+        run: echo "Testing!"
+      - name: "Run PyLint"
+        run: echo "Linting!"
